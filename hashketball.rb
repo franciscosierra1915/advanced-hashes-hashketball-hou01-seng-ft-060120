@@ -176,4 +176,19 @@ game_hash.each do |location, team_data|
 end
 end
 end
+
+def big_shoe_rebounds
+  big_shoe = 0 
+  rebounds = 0 
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |player|
+      size = player[:shoe]
+      if size > big_shoe
+        big_shoe = size
+        rebounds = player[:rebounds]
+      end
+    end
+  end 
+  rebounds
+end
 # Write code here
