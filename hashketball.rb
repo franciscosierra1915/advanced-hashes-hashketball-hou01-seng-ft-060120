@@ -166,6 +166,6 @@ def player_numbers(team_name)
      jersey << team_data[:players][:number]
    end
  end
-    
+    jersey
 end
 # Write code here
