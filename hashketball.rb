@@ -166,7 +166,7 @@ def player_numbers(team_name)
       if team_data[:team_name] == team_name
         jersey << team_data[:players][:number]
       end
-    
+    end
   end
   jersey
   
