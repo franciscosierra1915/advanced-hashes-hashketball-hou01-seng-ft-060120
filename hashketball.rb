@@ -160,14 +160,12 @@ return names
 end
 
 def player_numbers(team_name)
-  jersey = []
- game_hash.each do |home_away, team_colors_players|
-   team_colors_players.each do |big_array, hashes|
-   if team_colors_players[:team_name] == team_name
-     jersey << hashes[:number]
-   end
- end
- end
-    jersey
+  game_hash.each do |location, team_data|
+    if team_data[:team_name] ==  team_name
+      return team_data[:players].map do |player|
+        player[:number]
+      end
+    end
+  end
 end
 # Write code here
