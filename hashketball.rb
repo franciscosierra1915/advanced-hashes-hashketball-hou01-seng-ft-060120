@@ -164,7 +164,7 @@ def player_numbers(team_name)
  game_hash.each do |home_away, team_colors_players|
    team_colors_players.each do |big_array, hashes|
    if team_colors_players[:team_name] == team_name
-     jersey << big_array[hashes][:number]
+     jersey << hashes[:number]
    end
  end
  end
