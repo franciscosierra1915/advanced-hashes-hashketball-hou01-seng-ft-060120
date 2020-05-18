@@ -161,10 +161,10 @@ end
 
 def player_numbers(team_name)
   jersey = []
- game_hash.each do |location, team_data|
-   team_data.each do |player|
+ game_hash.each do |home_away, team_colors_players|
+   team_colors_players.each do |big_array, hashes|
    if team_data[:team_name] == team_name
-     jersey << player[:number]
+     jersey << big_array[hashes][:number]
    end
  end
  end
