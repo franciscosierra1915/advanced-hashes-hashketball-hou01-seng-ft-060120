@@ -176,6 +176,7 @@ game_hash.each do |location, team_data|
       return player.delete_if do |stat, value|
         [:player_name].include?(stat)
       end
+    end
   end
 end
 end
